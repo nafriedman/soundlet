@@ -30,7 +30,7 @@ Listing.create!(
   description: '2 brand new QSC K12 powered speakers. Near-mint condition.',
   price: '150.00',
   available: true,
-  category: 'Speakers',
+  category: 'Powered Speakers',
   user_id: user_id_array.sample,
   photo: "../app/assets/images/listing1-qsck12.jpeg"
 )
@@ -58,10 +58,27 @@ Listing.create!(
 )
 
 # Listing 4
+Listing.create!(
+  name: 'JBL LSR 310S Studio Subwoofer',
+  description: 'Great subwoofer for studio purposes. Perfect condition.',
+  price: '87.50',
+  available: true,
+  category: 'Subwoofers',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing4-lsr310s.jpeg"
+)
 
 
 # Listing 5
-
+Listing.create!(
+  name: '2x JBL LSR 305 Studio Monitors',
+  description: 'Great sounding studio monitors. Near mint condition.',
+  price: '50.00',
+  available: true,
+  category: 'Studio Monitors',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing5-lsr305.jpeg"
+)
 # Listing 6
 
 # Listing 7
