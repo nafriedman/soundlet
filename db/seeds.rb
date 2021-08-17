@@ -1,6 +1,6 @@
 # User seed
 
-puts 'Destroying all users!'
+puts 'Destroying all users.'
 User.destroy_all
 
 emails = %w[a@a.a b@b.b c@c.c d@d.d e@e.e]
@@ -28,7 +28,7 @@ Listing.destroy_all
 Listing.create!(
   name: '2x QSC K12 Speakers',
   description: '2 brand new QSC K12 powered speakers. Near-mint condition.',
-  price: '150.00',
+  price: 150.00,
   available: true,
   category: 'Powered Speakers',
   user_id: user_id_array.sample,
@@ -39,7 +39,7 @@ Listing.create!(
 Listing.create!(
   name: '2x Pioneer CDJ 2000 NXS2',
   description: '2 brand new Pioneer CDJ 2000 NXS2 CD Players. Near-mint condition.',
-  price: '200.00',
+  price: 200.00,
   available: true,
   category: 'CD and USB Players',
   user_id: user_id_array.sample,
@@ -50,7 +50,7 @@ Listing.create!(
 Listing.create!(
   name: 'ALLEN & HEATH XONE K2 DJ Controller',
   description: '1 ALLEN & HEATH XONE K2. Good condition.',
-  price: '42.50',
+  price: 42.50,
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
@@ -61,7 +61,7 @@ Listing.create!(
 Listing.create!(
   name: 'JBL LSR 310S Studio Subwoofer',
   description: 'Great subwoofer for studio purposes. Perfect condition.',
-  price: '87.50',
+  price: 87.50,
   available: true,
   category: 'Subwoofers',
   user_id: user_id_array.sample,
@@ -73,7 +73,7 @@ Listing.create!(
 Listing.create!(
   name: '2x JBL LSR 305 Studio Monitors',
   description: 'Great sounding studio monitors. Near mint condition.',
-  price: '50.00',
+  price: 50.00,
   available: true,
   category: 'Studio Monitors',
   user_id: user_id_array.sample,
@@ -83,7 +83,7 @@ Listing.create!(
 Listing.create!(
   name: 'Pioneer DJM900NXS2 Mixer',
   description: 'Used but in good condition.',
-  price: '125.00',
+  price: 125.00,
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
@@ -94,7 +94,7 @@ Listing.create!(
 Listing.create!(
   name: 'ALLEN & HEATH Xone 92 Mixer',
   description: 'Used but in great condition. No defects.',
-  price: '100.00',
+  price: 100.00,
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
@@ -105,7 +105,7 @@ Listing.create!(
 Listing.create!(
   name: 'Technics SL1200-MK2 Turntable',
   description: 'Single turntable. Comes with Technics cartridge.',
-  price: '80.00',
+  price: 80.00,
   available: true,
   category: 'Turntables',
   user_id: user_id_array.sample,
@@ -116,7 +116,7 @@ Listing.create!(
 Listing.create!(
   name: 'Audio Technica M50x Headphones',
   description: 'Barely used. Sound amazing!',
-  price: '40.00',
+  price: 40.00,
   available: true,
   category: 'Headphones',
   user_id: user_id_array.sample,
@@ -127,7 +127,7 @@ Listing.create!(
 Listing.create!(
   name: 'Pioneer DDJ-SX DJ ontroller',
   description: 'Mint condition. Works with Serato and Rekordbox.',
-  price: '40.00',
+  price: 40.00,
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
