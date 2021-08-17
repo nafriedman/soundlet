@@ -1,4 +1,4 @@
 class Rental < ApplicationRecord
   belongs_to :user
-  belongs_to :listing, dependent: :destroy
+  belongs_to :listing
 end

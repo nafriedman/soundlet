@@ -1,5 +1,9 @@
 # User seed
 
+puts 'Destroying all rentals.'
+Rental.destroy_all
+puts 'Destroying all listings.'
+Listing.destroy_all
 puts 'Destroying all users.'
 User.destroy_all
 
@@ -20,9 +24,6 @@ puts "All done! You now have #{User.count} users!"
 
 # Listing seed
 user_id_array = User.all.collect { |obj| obj.id }
-
-puts 'Destroying all listings.'
-Listing.destroy_all
 
 # Listing 1
 Listing.create!(
@@ -68,7 +69,6 @@ Listing.create!(
   photo: "../app/assets/images/listing4-lsr310s.jpeg"
 )
 
-
 # Listing 5
 Listing.create!(
   name: '2x JBL LSR 305 Studio Monitors',
@@ -79,6 +79,7 @@ Listing.create!(
   user_id: user_id_array.sample,
   photo: "../app/assets/images/listing5-lsr305.jpeg"
 )
+
 # Listing 6
 Listing.create!(
   name: 'Pioneer DJM900NXS2 Mixer',
@@ -125,7 +126,7 @@ Listing.create!(
 
 # Listing 10
 Listing.create!(
-  name: 'Pioneer DDJ-SX DJ ontroller',
+  name: 'Pioneer DDJ-SX DJ Controller',
   description: 'Mint condition. Works with Serato and Rekordbox.',
   price: 40.00,
   available: true,
@@ -135,3 +136,25 @@ Listing.create!(
 )
 
 puts "All done! You now have #{Listing.count} listings!"
+
+# Rental seed
+listing_id_array = Listing.all.collect { |obj| obj.id }
+
+15.times do 
+  date = Date.current + rand(-10...30)
+  if date < Date.current
+    status = "completed"
+  else
+    status = %w[pending approved denied].sample
+  end
+
+  Rental.create!(
+    from: date,
+    until: date + rand(1..7),
+    status: status,
+    user_id: user_id_array.sample,
+    listing_id: listing_id_array.sample
+  )
+end
+
+puts "All done! You now have #{Rental.count} rentals!"
