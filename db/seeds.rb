@@ -1,3 +1,5 @@
+# User seed
+
 puts 'Destroying all users!'
 User.destroy_all
 
@@ -15,3 +17,18 @@ emails.each_with_index do |email, index|
 end
 
 puts "All done! You now have #{User.count} users!"
+
+# Listing seed
+user_id_array = User.all.collect { |obj| obj.id }
+
+puts 'Destroying all listings!'
+Listing.destroy_all
+
+Listing.create!(
+  name: '2 QSC K12 Speakers',
+  description: '2 brand new QSC K12 powered speakers. Near-mint condition.',
+  price: '150.00',
+  available: true,
+  category: 'Speakers',
+  user_id: user_id_array.sample
+)
