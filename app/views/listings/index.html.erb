@@ -1,6 +1,6 @@
 <h1>Listings:</h1>
-<ul>
   <% @listings.each_with_index do |listing, index|  %>
+    <div class="container">
     <div class="card-trip">
     <%= image_tag listing.photo %>
     <div class="card-trip-infos">
@@ -12,5 +12,5 @@
     <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-trip-user avatar-bordered" />
     </div>
     </div>
+  </div>
   <% end %>
-</ul>
