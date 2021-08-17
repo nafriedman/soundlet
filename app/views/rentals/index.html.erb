@@ -1,0 +1,7 @@
+<h1>My rentals</h1>
+
+<ul>
+  <% @rentals.each do |rental| %>
+    <li><%= rental.listing.name %></li>
+  <% end %>
+</ul>
