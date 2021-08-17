@@ -1,6 +1,6 @@
 <h1>Listings:</h1>
 <ul>
-  <% @listings.each do |listing|  %>
+  <% @listings.each_with_index do |listing, index|  %>
     <div class="card-trip">
     <%= image_tag listing.photo %>
     <div class="card-trip-infos">
@@ -9,7 +9,7 @@
     <p><%= listing.description %></p>
     </div>
     <h2 class="card-trip-pricing">$<%= listing.price %> / day.</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-trip-user avatar-bordered" />
     </div>
     </div>
   <% end %>
