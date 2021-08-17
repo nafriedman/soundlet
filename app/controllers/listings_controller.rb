@@ -7,6 +7,7 @@ class ListingsController < ApplicationController
 
   def new
     @listing = Listing.new
+    authorize(@listing)
   end
 
   def create
