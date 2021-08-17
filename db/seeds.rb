@@ -32,7 +32,7 @@ Listing.create!(
   available: true,
   category: 'Powered Speakers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing1-qsck12.jpeg"
+  photo: "listing1-qsck12.jpeg"
 )
 
 # Listing 2
@@ -43,7 +43,7 @@ Listing.create!(
   available: true,
   category: 'CD and USB Players',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing2-cdj2000nxs2.jpeg"
+  photo: "listing2-cdj2000nxs2.jpeg"
 )
 
 # Listing 3
@@ -54,7 +54,7 @@ Listing.create!(
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing3-xonek2.jpeg"
+  photo: "listing3-xonek2.jpeg"
 )
 
 # Listing 4
@@ -65,7 +65,7 @@ Listing.create!(
   available: true,
   category: 'Subwoofers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing4-lsr310s.jpeg"
+  photo: "listing4-lsr310s.jpeg"
 )
 
 
@@ -77,7 +77,7 @@ Listing.create!(
   available: true,
   category: 'Studio Monitors',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing5-lsr305.jpeg"
+  photo: "listing5-lsr305.jpeg"
 )
 # Listing 6
 Listing.create!(
@@ -87,7 +87,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing6-djm900nxs2.jpeg"
+  photo: "listing6-djm900nxs2.jpeg"
 )
 
 # Listing 7
@@ -98,7 +98,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing7-xone92.jpeg"
+  photo: "listing7-xone92.jpeg"
 )
 
 # Listing 8
@@ -109,7 +109,7 @@ Listing.create!(
   available: true,
   category: 'Turntables',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing8-technics1200mk2.jpeg"
+  photo: "listing8-technics1200mk2.jpeg"
 )
 
 # Listing 9
@@ -120,7 +120,7 @@ Listing.create!(
   available: true,
   category: 'Headphones',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing9-m50x.jpeg"
+  photo: "listing9-m50x.jpeg"
 )
 
 # Listing 10
@@ -131,7 +131,7 @@ Listing.create!(
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing10-ddjsx.jpeg"
+  photo: "listing10-ddjsx.jpeg"
 )
 
 puts "All done! You now have #{Listing.count} listings!"
