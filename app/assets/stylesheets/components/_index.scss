@@ -5,5 +5,12 @@
 @import "navbar";
 
 h1 {
+  margin-top: 20px;
   text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }

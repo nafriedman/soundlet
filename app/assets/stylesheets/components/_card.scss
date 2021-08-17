@@ -1,30 +1,30 @@
-.card-trip {
+.card-listing {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 40px;
 }
 
-.card-trip > img {
+.card-listing > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-listing h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-listing p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.card-listing .card-listing-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-listing-infos .card-listing-user {
   position: absolute;
   right: 16px;
   top: -20px;
