@@ -21,11 +21,12 @@ puts "All done! You now have #{User.count} users!"
 # Listing seed
 user_id_array = User.all.collect { |obj| obj.id }
 
-puts 'Destroying all listings!'
+puts 'Destroying all listings.'
 Listing.destroy_all
 
+# Listing 1
 Listing.create!(
-  name: '2 QSC K12 Speakers',
+  name: '2x QSC K12 Speakers',
   description: '2 brand new QSC K12 powered speakers. Near-mint condition.',
   price: '150.00',
   available: true,
@@ -33,3 +34,40 @@ Listing.create!(
   user_id: user_id_array.sample,
   photo: "../app/assets/images/listing1-qsck12.jpeg"
 )
+
+# Listing 2
+Listing.create!(
+  name: '2x Pioneer CDJ 2000 NXS2',
+  description: '2 brand new Pioneer CDJ 2000 NXS2 CD Players. Near-mint condition.',
+  price: '200.00',
+  available: true,
+  category: 'CD and USB Players',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing2-cdj2000nxs2.jpeg"
+)
+
+# Listing 3
+Listing.create!(
+  name: 'ALLEN & HEATH XONE K2 DJ Controller',
+  description: '1 ALLEN & HEATH XONE K2. Good condition.',
+  price: '42.50',
+  available: true,
+  category: 'DJ Controllers',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing3-xonek2.jpeg"
+)
+
+# Listing 4
+
+
+# Listing 5
+
+# Listing 6
+
+# Listing 7
+
+# Listing 8
+
+# Listing 9
+
+# Listing 10
