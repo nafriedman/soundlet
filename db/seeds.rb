@@ -30,5 +30,6 @@ Listing.create!(
   price: '150.00',
   available: true,
   category: 'Speakers',
-  user_id: user_id_array.sample
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing1-qsck12.jpeg"
 )
