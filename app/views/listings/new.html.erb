@@ -1,6 +1,6 @@
 <h1>New Listing Page</h1>
 
-<%= form_for(@listing) do |f| %>
+<%= simple_form_for(@listing) do |f| %>
   <%= f.text_field :name %>
   <%= f.text_area :description %>
   <%= f.number_field :price %>
