@@ -1,0 +1,10 @@
+<h1>New Listing Page</h1>
+
+<%= form_for(@listing) do |f| %>
+  <%= f.input :name %>
+  <%= f.text_field :description %>
+  <%= f.number_field :price %>
+  <%= f.checkbox :available %>
+  <%= f.input :category %>
+  <%= f.submit :submit %>
+<% end %>
