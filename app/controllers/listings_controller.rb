@@ -1,4 +1,6 @@
 class ListingsController < ApplicationController
+  before_action :set_listing, only: [:show]
+
   def index
     @listings = policy_scope(Listing).order(created_at: :desc)
   end
@@ -17,7 +19,6 @@ class ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find(params[:id])
   end
 
   def my_listings
@@ -28,5 +29,10 @@ class ListingsController < ApplicationController
 
   def listing_params
     params.require(:listing).permit(:name, :description, :price, :category, :photo)
+  end
+
+  def set_listing
+    @listing = Listing.find(params[:id])
+    authorize(@listing)
   end
 end
