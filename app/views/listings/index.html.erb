@@ -1,5 +1,6 @@
 <h1>Listing Index Page</h1>
-
-<% @listings.each do |listing|  %>
-  <%= listing.name %>
-<% end %>
+<ul>
+  <% @listings.each do |listing|  %>
+    <li><%= listing.name %></li>
+  <% end %>
+</ul>
