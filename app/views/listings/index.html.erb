@@ -1,6 +1,16 @@
-<h1>Listing Index Page</h1>
+<h1>Listings:</h1>
 <ul>
   <% @listings.each do |listing|  %>
-    <li><%= listing.name %></li>
+    <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+    <div>
+    <h2><%= listing.name %></h2>
+    <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+    </div>
   <% end %>
 </ul>
