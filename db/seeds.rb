@@ -80,10 +80,37 @@ Listing.create!(
   photo: "../app/assets/images/listing5-lsr305.jpeg"
 )
 # Listing 6
+Listing.create!(
+  name: 'Pioneer DJM900NXS2 Mixer',
+  description: 'Used but in good condition.',
+  price: '125.00',
+  available: true,
+  category: 'DJ Mixers',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing6-djm900nxs2.jpeg"
+)
 
 # Listing 7
+Listing.create!(
+  name: 'ALLEN & HEATH Xone 92 Mixer',
+  description: 'Used but in great condition. No defects.',
+  price: '100.00',
+  available: true,
+  category: 'DJ Mixers',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing7-xone92.jpeg"
+)
 
 # Listing 8
+Listing.create!(
+  name: 'Technics SL1200-MK2 Turntable',
+  description: 'Single turntable. Comes with Technics cartridge.',
+  price: '80.00',
+  available: true,
+  category: 'Turntables',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing8-technics1200mk2.jpeg"
+)
 
 # Listing 9
 
