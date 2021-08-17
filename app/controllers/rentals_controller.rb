@@ -28,7 +28,7 @@ class RentalsController < ApplicationController
   private
 
   def set_rental
-    @rental = Rental.find(:id)
+    @rental = Rental.find(params[:id])
   end
 
   def set_listing
