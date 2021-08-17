@@ -20,14 +20,6 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
   def my_listings
 
   end
@@ -35,5 +27,6 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
+    params.require(:listing).permit(:name, :description, :price, :category, :photo)
   end
 end
