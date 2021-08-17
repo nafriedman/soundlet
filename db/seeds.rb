@@ -113,7 +113,25 @@ Listing.create!(
 )
 
 # Listing 9
+Listing.create!(
+  name: 'Audio Technica M50x Headphones',
+  description: 'Barely used. Sound amazing!',
+  price: '40.00',
+  available: true,
+  category: 'Headphones',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing9-m50x.jpeg"
+)
 
 # Listing 10
+Listing.create!(
+  name: 'Pioneer DDJ-SX DJ ontroller',
+  description: 'Mint condition. Works with Serato and Rekordbox.',
+  price: '40.00',
+  available: true,
+  category: 'DJ Controllers',
+  user_id: user_id_array.sample,
+  photo: "../app/assets/images/listing10-ddjsx.jpeg"
+)
 
 puts "All done! You now have #{Listing.count} listings!"
