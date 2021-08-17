@@ -88,3 +88,5 @@ Listing.create!(
 # Listing 9
 
 # Listing 10
+
+puts "All done! You now have #{Listing.count} listings!"
