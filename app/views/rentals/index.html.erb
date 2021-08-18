@@ -14,8 +14,9 @@
         <% else  %>
            <span class="badge badge-light"><%= rental.status.upcase %></span>
         <% end %>
+        <p>Category: <%= rental.listing.category %></p>
         <p>From: <%= rental.from %>, Until: <%= rental.until %></p>
-        <p>Owner: <%= rental.user.username %></p>
+        <p>Owner Username: <%= rental.user.username %></p>
       </div>
     </div>
   <% end %>
