@@ -2,6 +2,7 @@ class RentalsController < ApplicationController
   before_action :set_rental, only: [:edit]
   before_action :set_listing, except: [:index]
 
+
   def index
     @rentals = policy_scope(Rental)
   end
@@ -19,10 +20,12 @@ class RentalsController < ApplicationController
   end
 
   def edit
+    @rental = Rental.find(params[:id])
+    authorize(@rental)
   end
 
   def update
-    #TODO
+    authorize(@rental)
   end
 
   def listing_rentals
