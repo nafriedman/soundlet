@@ -7,10 +7,13 @@ class ListingsController < ApplicationController
 
   def new
     @listing = Listing.new
+    authorize(@listing)
   end
 
   def create
     @listing = Listing.new(listing_params)
+    @listing.user = current_user
+    authorize(@listing)
     if @listing.save!
       redirect_to listing_path(@listing)
     else
