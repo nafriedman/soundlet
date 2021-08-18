@@ -22,6 +22,7 @@ class ListingsController < ApplicationController
   end
 
   def show
+    @rental = Rental.new
   end
 
   def my_listings
