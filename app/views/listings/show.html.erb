@@ -6,3 +6,14 @@
 <p>Price: <%= @listing.price %></p>
 <p>Owner's name: <%= @listing.user.username %></p>
 <p>Category: <%= @listing.category %></p>
+
+<h3 class="text-center">Rent this out!</h3>
+<div class="row justify-content-center">
+  <div class="col-8">
+    <%= simple_form_for [ @listing, @rental ] do |f| %>
+      <%= f.input :from %>
+      <%= f.input :until %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
