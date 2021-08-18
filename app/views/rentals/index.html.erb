@@ -1,5 +1,5 @@
 <div class="container">
-<h1>My rentals</h1>
+  <h1>My rentals</h1>
   <% @rentals.each do |rental| %>
     <div class="card-product my-3 px-3">
       <%= link_to listing_path(rental.listing) do %>
