@@ -5,13 +5,17 @@ class RentalsController < ApplicationController
   def index
     @rentals = policy_scope(Rental)
   end
-
-  def new
-    # @rental = Rental.new
-  end
   
   def create
-    #TODO
+    @rental = Rental.new(rental_params)
+    @rental.listing = @listing
+    @rental.user = current_user
+    if @rental.save!
+      redirect_to rentals_path
+    else
+      render 'listings/show'
+    end
+    authorize(@rental)
   end
 
   def edit
@@ -36,7 +40,7 @@ class RentalsController < ApplicationController
   end
 
   def rental_params
-    params.require(@rental).permit(:from, :until, :status, :user_id, :listing_id)
+    params.require(:rental).permit(:from, :until, :status, :user_id, :listing_id)
   end
 
 end

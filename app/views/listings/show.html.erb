@@ -13,6 +13,7 @@
     <%= simple_form_for [ @listing, @rental ] do |f| %>
       <%= f.input :from %>
       <%= f.input :until %>
+      <%= f.hidden_field :status, value: "pending" %>
       <%= f.submit %>
     <% end %>
   </div>
