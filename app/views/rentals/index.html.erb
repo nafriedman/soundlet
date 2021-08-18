@@ -1,9 +1,13 @@
 <h1>My rentals</h1>
 
-<ul>
-  <% @rentals.each do |rental| %>
-    <li>Name: <%= rental.listing.name %></li>
-    <li>Status: <%= rental.status %></li>
-    <li>From: <%= rental.from %>, Until: <%= rental.until %></li>
+<% @rentals.each do |rental| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= rental.listing.name %></h2>
+      <p>Status: <%= rental.status %></p>
+      <p>From: <%= rental.from %>, Until: <%= rental.until %></p>
+      <p>Owner: <%= rental.user.username %></p>
+    </div>
+  </div>
   <% end %>
-</ul>
