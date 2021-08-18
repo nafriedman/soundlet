@@ -22,7 +22,7 @@
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false" src="https://www.pngitem.com/pimgs/m/411-4110616_spirited-away-hd-png-download.png" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">My Rentals</a>
+          <%= link_to "My Rentals" , rentals_path, class: "dropdown-item" %>
           <a class="dropdown-item" href="#">My Listings</a>
           <%= link_to "Logout" , destroy_user_session_path , method: :delete, class: "dropdown-item btn btn-default btn-sm" %>
         </div>
