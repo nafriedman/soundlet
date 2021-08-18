@@ -1,7 +1,7 @@
 class RentalsController < ApplicationController
   before_action :set_rental, only: [:edit]
   before_action :set_listing, except: [:index]
-  
+
   def index
     @rentals = policy_scope(Rental)
   end
@@ -9,7 +9,7 @@ class RentalsController < ApplicationController
   def new
     @rental = Rental.new
   end
-  
+
   def create
     #TODO
   end

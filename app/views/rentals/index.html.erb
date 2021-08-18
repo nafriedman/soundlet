@@ -5,7 +5,15 @@
       <%= image_tag rental.listing.photo %>
       <div class="card-product-infos">
         <h2><%= rental.listing.name %></h2>
-        <p>Status: <%= rental.status %></p>
+        <% if rental.status.downcase == "approved" %>
+          <span class="badge badge-success"><%= rental.status.upcase %></span>
+        <% elsif rental.status.downcase == "pending" %>
+          <span class="badge badge-warning"><%= rental.status.upcase %></span>
+        <% elsif rental.status.downcase == "denied" %>
+          <span class="badge badge-danger"><%= rental.status.upcase %></span>
+        <% else  %>
+           <span class="badge badge-light"><%= rental.status.upcase %></span>
+        <% end %>
         <p>From: <%= rental.from %>, Until: <%= rental.until %></p>
         <p>Owner: <%= rental.user.username %></p>
       </div>
