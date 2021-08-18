@@ -1,11 +1,11 @@
 class RentalsController < ApplicationController
   before_action :set_rental, only: [:edit]
   before_action :set_listing, except: [:index]
-  
+
   def index
     @rentals = policy_scope(Rental)
   end
-  
+
   def create
     @rental = Rental.new(rental_params)
     @rental.listing = @listing
