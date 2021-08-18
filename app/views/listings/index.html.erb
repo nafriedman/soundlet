@@ -1,18 +1,24 @@
-<h1 class = "margin-top">Listings</h1>
-<div class="cards">
-  <% @listings.each_with_index do |listing, index|  %>
-    <%= link_to listing_path(listing) do %>
-      <div class="card-listing">
-        <img src=<%=listing.photo%>>
-        <div class="card-listing-infos">
-          <div>
-            <h2><%= listing.name %></h2>
-            <p><%= listing.description %></p>
+  <h1 class="margin-top">Listings</h1>
+  <div class="cards">
+    <% @listings.each_with_index do |listing, index| %>
+      <%= link_to listing_path(listing) do %>
+        <div class="card-listing">
+          <img src=<%=listing.photo%>>
+          <div class="card-listing-infos">
+            <div>
+              <h2>
+                <%= listing.name %>
+              </h2>
+              <p>
+                <%= listing.description %>
+              </p>
+            </div>
+            <h2 class="card-listing-pricing">
+              <%= number_to_currency(listing.price) %> / day
+            </h2>
+            <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
           </div>
-          <h2 class="card-listing-pricing"><%= number_to_currency(listing.price) %> / day</h2>
-          <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
         </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
+        <% end %>
+      <% end %>
+  </div>
