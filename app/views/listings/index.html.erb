@@ -1,6 +1,16 @@
-<h1>Listing Index Page</h1>
-<ul>
-  <% @listings.each do |listing|  %>
-    <li><%= listing.name %></li>
+<h1 class = "margin-top">Listings</h1>
+<div class="cards">
+  <% @listings.each_with_index do |listing, index|  %>
+    <a href='#' class="card-listing">
+      <img src=<%=listing.photo%>>
+      <div class="card-listing-infos">
+        <div>
+          <h2><%= listing.name %></h2>
+          <p><%= listing.description %></p>
+        </div>
+        <h2 class="card-listing-pricing"><%= number_to_currency(listing.price) %> / day</h2>
+        <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
+      </div>
+    </a>
   <% end %>
-</ul>
+</div>

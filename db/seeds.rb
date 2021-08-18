@@ -33,7 +33,7 @@ Listing.create!(
   available: true,
   category: 'Powered Speakers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing1-qsck12.jpeg"
+  photo: "https://www.gearank.com/sites/default/files/QSC-K12-2.jpg"
 )
 
 # Listing 2
@@ -44,18 +44,18 @@ Listing.create!(
   available: true,
   category: 'CD and USB Players',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing2-cdj2000nxs2.jpeg"
+  photo: "https://u.cdn.sera.to/content/images/29/22229/22229_article_big.jpeg"
 )
 
 # Listing 3
 Listing.create!(
-  name: 'ALLEN & HEATH XONE K2 DJ Controller',
+  name: 'ALLEN & HEATH Xone K2 DJ Controller',
   description: '1 ALLEN & HEATH XONE K2. Good condition.',
   price: 42.50,
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing3-xonek2.jpeg"
+  photo: "https://static.bhphoto.com/images/images500x500/Allen_Heath_XONE_K2_Xone_K2_Professional_DJ_MIDI_1327576972_840780.jpg"
 )
 
 # Listing 4
@@ -66,7 +66,7 @@ Listing.create!(
   available: true,
   category: 'Subwoofers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing4-lsr310s.jpeg"
+  photo: "https://i.ytimg.com/vi/mh82BFqkzE4/maxresdefault.jpg"
 )
 
 # Listing 5
@@ -77,7 +77,7 @@ Listing.create!(
   available: true,
   category: 'Studio Monitors',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing5-lsr305.jpeg"
+  photo: "https://i.ytimg.com/vi/AUBnKyoudlo/maxresdefault.jpg"
 )
 
 # Listing 6
@@ -88,7 +88,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing6-djm900nxs2.jpeg"
+  photo: "https://m.media-amazon.com/images/I/71GCSeOKQqL._AC_SL1500_.jpg"
 )
 
 # Listing 7
@@ -99,7 +99,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing7-xone92.jpeg"
+  photo: "https://i.redd.it/e5g7hqaklkt01.png"
 )
 
 # Listing 8
@@ -110,7 +110,7 @@ Listing.create!(
   available: true,
   category: 'Turntables',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing8-technics1200mk2.jpeg"
+  photo: "https://i.ytimg.com/vi/rFeMMJlXplY/maxresdefault.jpg"
 )
 
 # Listing 9
@@ -121,7 +121,7 @@ Listing.create!(
   available: true,
   category: 'Headphones',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing9-m50x.jpeg"
+  photo: "https://i.ytimg.com/vi/0c4E2LbrT_I/maxresdefault.jpg"
 )
 
 # Listing 10
@@ -132,7 +132,7 @@ Listing.create!(
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "../app/assets/images/listing10-ddjsx.jpeg"
+  photo: "https://i.ytimg.com/vi/ZIMZpuk6Rr4/maxresdefault.jpg"
 )
 
 puts "All done! You now have #{Listing.count} listings!"
@@ -140,7 +140,7 @@ puts "All done! You now have #{Listing.count} listings!"
 # Rental seed
 listing_id_array = Listing.all.collect { |obj| obj.id }
 
-15.times do 
+15.times do
   date = Date.current + rand(-10...30)
   if date < Date.current
     status = "completed"
