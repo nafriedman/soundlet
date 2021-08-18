@@ -2,6 +2,8 @@
 
 <ul>
   <% @rentals.each do |rental| %>
-    <li><%= rental.listing.name %></li>
+    <li>Name: <%= rental.listing.name %></li>
+    <li>Status: <%= rental.status %></li>
+    <li>From: <%= rental.from %>, Until: <%= rental.until %></li>
   <% end %>
 </ul>
