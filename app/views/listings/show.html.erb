@@ -1,17 +1,17 @@
 <div class="container">
-  <h1>Listings Show Page</h1>
+  <h1><%=@listing.name%></h1>
   <div class="d-flex">
     <div>
       <% if @listing.available %>
         <h3>
           <style class="badge p-3 my-2 badge-success">
-            Available !
+            Available!
           </style>
         </h3>
         <% else %>
           <h3>
             <style class="badge p-3 my-2 badge-warning" width="200px">
-              Not available right now
+              Not available.
             </style>
           </h3>
           <% end %>
@@ -22,23 +22,22 @@
     <img src=<%=@listing.photo%> width="400px">
     <div class="ml-3">
       <div>
-        <h2>
-          <%= @listing.name %>
-        </h2>
         <p>
           <%= @listing.description %>
         </p>
       </div>
-      <p>Price: <%= number_to_currency(@listing.price) %>
+      <p>Price: <%= number_to_currency(@listing.price) %> / day
       </p>
-      <p>Owner's name: <%= @listing.user.username %>
+      <p>Owner: <%= @listing.user.username %>
       </p>
       <p>Category: <%= @listing.category %>
+      </p>
+      <p>Pick-Up Address: <%= @listing.user.address %>
       </p>
     </div>
   </div>
 
-  <h3 class="mt-5">I need this equipement..</h3>
+  <h3 class="mt-5">I need this equipement...</h3>
   <div class="col-8">
     <%= simple_form_for [ @listing, @rental ] do |f| %>
       <%= f.input :from %>
