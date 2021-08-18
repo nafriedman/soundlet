@@ -22,17 +22,15 @@
     <img src=<%=@listing.photo%> width="400px">
     <div class="ml-3">
       <div>
-        <p>
-          <%= @listing.description %>
-        </p>
+        <p><strong>Listing Description:</strong> <%= @listing.description %></p>
       </div>
-      <p>Price: <%= number_to_currency(@listing.price) %> / day
+      <p><strong>Price:</strong> <%= number_to_currency(@listing.price) %> / day
       </p>
-      <p>Owner: <%= @listing.user.username %>
+      <p><strong>Owner:</strong> <%= @listing.user.username %>
       </p>
-      <p>Category: <%= @listing.category %>
+      <p><strong>Category:</strong> <%= @listing.category %>
       </p>
-      <p>Pick-Up Address: <%= @listing.user.address %>
+      <p><strong>Pick-Up Address:</strong> <%= @listing.user.address %>
       </p>
     </div>
   </div>
