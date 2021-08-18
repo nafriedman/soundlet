@@ -47,3 +47,17 @@
   color:rgba(0, 0, 0, 0.8);
   opacity: 90%;
 }
+
+h1 {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.margin-top {
+  margin-top: 40px;
+}

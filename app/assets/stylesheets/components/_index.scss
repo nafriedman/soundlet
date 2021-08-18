@@ -3,17 +3,5 @@
 @import "avatar";
 @import "card";
 @import "navbar";
-
-h1 {
-  text-align: center;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
-.margin-top {
-  margin-top: 40px;
-}
+@import "searchform";
+@import "banner";

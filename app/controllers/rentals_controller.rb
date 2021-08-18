@@ -3,7 +3,7 @@ class RentalsController < ApplicationController
   before_action :set_listing, except: [:index]
   
   def index
-    @rentals = Rental.all
+    @rentals = policy_scope(Rental)
   end
 
   def new
