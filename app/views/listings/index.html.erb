@@ -3,7 +3,7 @@
     <% @listings.each_with_index do |listing, index| %>
       <%= link_to listing_path(listing) do %>
         <div class="card-listing">
-          <img src=<%=listing.photo%>>
+          <%=cl_image_tag(listing.photo)%>
           <div class="card-listing-infos">
             <div>
               <h2>

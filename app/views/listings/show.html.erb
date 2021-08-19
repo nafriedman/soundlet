@@ -2,7 +2,7 @@
   <h1 class="margin-top"><%=@listing.name%></h1>
 
   <div class="margin-top d-flex align-items-center">
-    <img src=<%=@listing.photo%> width="400px">
+    <%=cl_image_tag(@listing.photo, width: 400)%>
     <div class="ml-3">
       <div>
         <h4 class="mb-4 ml-4"><%= @listing.description %></h4>
