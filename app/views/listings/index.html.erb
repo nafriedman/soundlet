@@ -13,10 +13,10 @@
         <% if listing.image.attached? %>
           <%= cl_image_tag listing.image.key%>
         <% else %>
-          <%= image_tag listing.photo%>>
+          <%= image_tag listing.photo%>
         <% end %>
           <div class="card-listing-infos">
-            <div class="d-flex">
+            <div class="d-flex justify-content-between card-product-content">
               <div class="pr-5">
                 <h2>
                   <%= listing.name %>
