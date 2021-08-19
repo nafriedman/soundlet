@@ -2,7 +2,7 @@
 
   <div class="container">
     <div class="cards">
-      <% @listings.each_with_index do |listing, index| %>
+      <% @listings.each do |listing| %>
         <%= link_to listing_path(listing) do %>
           <div class="card-listing">
             <img src=<%=listing.photo%>>
