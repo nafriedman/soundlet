@@ -3,7 +3,7 @@
   <div class="container">
     <div class="cards">
       <% @listings.each do |listing| %>
-        <%= link_to listing_path(listing) do %>
+        <%= link_to listing_rentals_path(listing) do %>
           <div class="card-listing">
             <img src=<%=listing.photo%>>
             <div class="card-listing-infos">
