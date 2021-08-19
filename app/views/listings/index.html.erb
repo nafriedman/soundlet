@@ -11,7 +11,7 @@
       <%= link_to listing_path(listing) do %>
         <div class="card-listing">
         <% if listing.image.attached? %>
-          <%= cl_image_tag listing.image.key%>%
+          <%= cl_image_tag listing.image.key%>
         <% else %>
           <img src=<%=listing.photo%>>
         <% end %>
