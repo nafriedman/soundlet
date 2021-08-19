@@ -13,17 +13,17 @@
         <%= link_to "Home" , root_path, method: :get, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Listings" , listings_path, method: :get, class: "nav-link" %>
+        <%= link_to "Gear to Rent" , listings_path, method: :get, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Add Listing" , new_listing_path, method: :get, class: "nav-link" %>
+        <%= link_to "Put Gear Up for Rent" , new_listing_path, method: :get, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false" src="https://www.pngitem.com/pimgs/m/411-4110616_spirited-away-hd-png-download.png" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "My Rentals" , rentals_path, class: "dropdown-item" %>
-          <a class="dropdown-item" href="#">My Listings</a>
+          <a class="dropdown-item" href="#">My Gear for Rent</a>
           <%= link_to "Logout" , destroy_user_session_path , method: :delete, class: "dropdown-item btn btn-default btn-sm" %>
         </div>
       </li>
