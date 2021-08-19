@@ -1,23 +1,23 @@
 <div class="container">
   <h1 class="margin-top"><%=@listing.name%></h1>
 
-
   <div class="margin-top d-flex align-items-center">
     <img src=<%=@listing.photo%> width="400px">
     <div class="ml-3">
       <div>
-        <h4><%= @listing.description %></h4>
+        <h4 class="mb-4 ml-4"><%= @listing.description %></h4>
       </div>
-      <p><strong>Price:</strong> <%= number_to_currency(@listing.price) %> / day
+      <p><strong class="ml-4">Price:</strong> <%= number_to_currency(@listing.price) %> / day
       </p>
-      <p><strong>Owner:</strong> <%= @listing.user.username %>
+      <p><strong class="ml-4">Owner:</strong> <%= @listing.user.username %>
       </p>
-      <p><strong>Category:</strong> <%= @listing.category %>
+      <p><strong class="ml-4">Category:</strong> <%= @listing.category %>
       </p>
-      <p><strong>Pick-Up Address:</strong> <%= @listing.user.address %>
+      <p><strong class="ml-4">Pick-Up Address:</strong> <%= @listing.user.address %>
       </p>
     </div>
   </div>
+
 <div class="mt-3 d-flex mb-2">
     <div>
       <% if @listing.available %>
@@ -26,13 +26,13 @@
             Available!
           </style>
         </h3>
-        <% else %>
+      <% else %>
           <h3>
             <style class="badge p-3 my-2 badge-warning" width="200px">
               Not available.
             </style>
           </h3>
-          <% end %>
+        <% end %>
     </div> <h3 class="ml-4 mt-3">I need this equipement...</h3>
   </div>
 
