@@ -27,21 +27,12 @@
   position: absolute;
   right: 16px;
   top: -20px;
-  width: 40px;
-  }
-  .card-show-page {
-    margin-left: 0px;
-    margin-top: 40px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    color: black;
-    text-decoration: none;
   }
    > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-radius: 8px;
   }
   &:hover {
   color:rgba(0, 0, 0, 0.8);
