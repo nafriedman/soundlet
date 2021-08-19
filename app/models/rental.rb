@@ -1,5 +1,5 @@
 class Rental < ApplicationRecord
-  STATUS = %w(pending approved declined completed)
+  STATUS = %w(Pending Approved Declined Completed)
   
   validates :from, presence: true
   validates :until, presence: true

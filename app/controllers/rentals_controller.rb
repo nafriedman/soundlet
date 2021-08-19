@@ -22,8 +22,6 @@ class RentalsController < ApplicationController
   def update
     if @rental.update(rental_params)
       redirect_to :listing_rentals
-    else
-      listing_rentals
     end
     authorize(@rental)
   end
