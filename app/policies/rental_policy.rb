@@ -1,7 +1,7 @@
 class RentalPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user: user)
+      scope.all
     end
   end
   
@@ -10,6 +10,10 @@ class RentalPolicy < ApplicationPolicy
   end
 
   def update?
+    true
+  end
+
+  def listing_rentals?
     true
   end
 end
