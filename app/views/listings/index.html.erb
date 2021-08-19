@@ -1,11 +1,11 @@
 <div class="container search-form-control form-group pt-3">
   <form method='get' action="/listings">
-    <%= text_field_tag :query, params[:query], class: "form-control" , placeholder: "Find a Gear to Rent" %>
+    <%= text_field_tag :query, params[:query], class: "form-control" , placeholder: "Find a Gear to Rent Out" %>
     <%= submit_tag "Search" , class: "btn btn-flat mr-3 pt-4"%>
   </form>
 </div>
 
-  <h1 class="margin-top">Gear to Rent</h1>
+  <h1 class="margin-top">Gear for Rent</h1>
   <div class="cards">
     <% @listings.each_with_index do |listing, index| %>
       <%= link_to listing_path(listing) do %>
