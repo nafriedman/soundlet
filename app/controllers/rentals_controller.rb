@@ -21,7 +21,7 @@ class RentalsController < ApplicationController
 
   def update
     if @rental.update(rental_params)
-      redirect_to :listing_rentals
+      redirect_to :listing_rentals, notice: 'Status updated successfully!'
     end
     authorize(@rental)
   end

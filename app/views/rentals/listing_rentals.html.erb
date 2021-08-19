@@ -1,6 +1,7 @@
 <div class="container">
   <h1><%= @listing.name %></h1>
   <h2>Rental requests</h2>
+  <p id="notice"><%= notice %></p>
   <% @listing.rentals.each do |rental| %>
     <div class="card my-3 p-3">
       <h3>Rental requested by <%= rental.user.username %></h3>  
