@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  before_action :set_rental, only: [:edit]
+  before_action :set_rental, only: [:update]
   before_action :set_listing, except: [:index]
 
 
@@ -19,23 +19,23 @@ class RentalsController < ApplicationController
     authorize(@rental)
   end
 
-  def edit
-    @rental = Rental.find(params[:id])
-    authorize(@rental)
-  end
-
   def update
+    if @rental.update(rental_params)
+      redirect_to :listing_rentals
+    else
+      listing_rentals
+    end
     authorize(@rental)
   end
 
   def listing_rentals
-    #TODO
+    authorize(@listing)
   end
 
   private
 
   def set_rental
-    @rental = Rental.find(params[:id])
+    @rental = Rental.find(params[:rental][:rental_id])
   end
 
   def set_listing

@@ -1,9 +1,0 @@
-<div class="container">
-  <h1><%= @rental.listing.name %></h1>
-  <h3>Resquested by <%= @rental.user.username %></h3>
-
-  <%= simple_form_for [@listing, @rental] do |f| %>
-    <%= f.input :status %>
-    <%= f.submit %>
-  <% end %>
-</div>

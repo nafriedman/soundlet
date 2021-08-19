@@ -12,4 +12,8 @@ class ListingPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def listing_rentals?
+    true
+  end
 end

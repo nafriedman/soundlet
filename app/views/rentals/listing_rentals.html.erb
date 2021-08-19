@@ -1,0 +1,22 @@
+<div class="container">
+  <h1><%= @listing.name %></h1>
+  <h2>Rental requests</h2>
+  <% @listing.rentals.each do |rental| %>
+    <div class="card my-3 p-3">
+      <h3>Rental requested by <%= rental.user.username %></h3>  
+      <p>From <%= rental.from %></p>
+      <p>Until <%= rental.until %></p>
+      <div class="form-group">
+        <%= simple_form_for [@listing, rental] do |f| %>
+          <div class="my-2">
+            <%= f.input :status, as: :select, collection: Rental::STATUS %>
+            <%= f.hidden_field :rental_id, value: rental.id %>
+          </div>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+<div class="btn btn-light"><%= link_to 'Back to My Gear', 'my_listings_path' %></div>
+</div>
