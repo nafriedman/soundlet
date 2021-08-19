@@ -3,9 +3,9 @@
 
   <div class="margin-top d-flex align-items-center">
   <% if @listing.image.attached? %>
-    <%= cl_image_tag @listing.image.key, width:400 %>
-  <% else %>s
-    <img src=<%=@listing.photo%> width="400px">
+    <%= cl_image_tag @listing.image.key, width: 400%>
+  <% else %>
+    <%= image_tag @listing.photo, width: 400%>
   <% end%>
     <div class="ml-3">
       <div>

@@ -13,7 +13,7 @@
         <% if listing.image.attached? %>
           <%= cl_image_tag listing.image.key%>
         <% else %>
-          <img src=<%=listing.photo%>>
+          <%= image_tag listing.photo%>>
         <% end %>
           <div class="card-listing-infos">
             <div>
