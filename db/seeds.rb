@@ -143,9 +143,9 @@ listing_id_array = Listing.all.collect { |obj| obj.id }
 15.times do
   date = Date.current + rand(-10...30)
   if date < Date.current
-    status = "completed"
+    status = "Completed"
   else
-    status = %w[pending approved denied].sample
+    status = %w[Pending Approved Denied].sample
   end
 
   Rental.create!(
