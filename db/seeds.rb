@@ -33,7 +33,7 @@ Listing.create!(
   available: true,
   category: 'Powered Speakers',
   user_id: user_id_array.sample,
-  photo: "https://www.gearank.com/sites/default/files/QSC-K12-2.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387442/seed1.jpg"
 )
 
 # Listing 2
@@ -44,7 +44,7 @@ Listing.create!(
   available: true,
   category: 'CD and USB Players',
   user_id: user_id_array.sample,
-  photo: "https://u.cdn.sera.to/content/images/29/22229/22229_article_big.jpeg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387431/seed2.jpg"
 )
 
 # Listing 3
@@ -55,7 +55,7 @@ Listing.create!(
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "https://static.bhphoto.com/images/images500x500/Allen_Heath_XONE_K2_Xone_K2_Professional_DJ_MIDI_1327576972_840780.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387415/seed3.jpg"
 )
 
 # Listing 4
@@ -66,7 +66,7 @@ Listing.create!(
   available: true,
   category: 'Subwoofers',
   user_id: user_id_array.sample,
-  photo: "https://i.ytimg.com/vi/mh82BFqkzE4/maxresdefault.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387407/seed4.jpg"
 )
 
 # Listing 5
@@ -77,7 +77,7 @@ Listing.create!(
   available: true,
   category: 'Studio Monitors',
   user_id: user_id_array.sample,
-  photo: "https://i.ytimg.com/vi/AUBnKyoudlo/maxresdefault.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387370/seed5.jpg"
 )
 
 # Listing 6
@@ -88,7 +88,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "https://m.media-amazon.com/images/I/71GCSeOKQqL._AC_SL1500_.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387365/seed6.jpg"
 )
 
 # Listing 7
@@ -99,7 +99,7 @@ Listing.create!(
   available: true,
   category: 'DJ Mixers',
   user_id: user_id_array.sample,
-  photo: "https://i.redd.it/e5g7hqaklkt01.png"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387334/seed7.jpg"
 )
 
 # Listing 8
@@ -110,7 +110,7 @@ Listing.create!(
   available: true,
   category: 'Turntables',
   user_id: user_id_array.sample,
-  photo: "https://i.ytimg.com/vi/rFeMMJlXplY/maxresdefault.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387285/seed8.jpg"
 )
 
 # Listing 9
@@ -121,7 +121,7 @@ Listing.create!(
   available: true,
   category: 'Headphones',
   user_id: user_id_array.sample,
-  photo: "https://i.ytimg.com/vi/0c4E2LbrT_I/maxresdefault.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387273/seed9.jpg"
 )
 
 # Listing 10
@@ -132,7 +132,7 @@ Listing.create!(
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.sample,
-  photo: "https://i.ytimg.com/vi/ZIMZpuk6Rr4/maxresdefault.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387261/seed10.jpg"
 )
 
 puts "All done! You now have #{Listing.count} listings!"
