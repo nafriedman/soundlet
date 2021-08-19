@@ -1,25 +1,30 @@
+<h1>My Requests</h1>
 <div class="container">
-  <h1>My rentals</h1>
-  <% @rentals.each do |rental| %>
-    <div class="card-product my-3 px-3">
-      <%= link_to listing_path(rental.listing) do %>
-        <%= image_tag rental.listing.photo %>
-      <% end %>
-      <div class="card-product-infos">
-        <h2><%= rental.listing.name %></h2>
-        <% if rental.status.downcase == "approved" %>
-          <span class="badge badge-success"><%= rental.status.upcase %></span>
-        <% elsif rental.status.downcase == "pending" %>
-          <span class="badge badge-warning"><%= rental.status.upcase %></span>
-        <% elsif rental.status.downcase == "denied" %>
-          <span class="badge badge-danger"><%= rental.status.upcase %></span>
-        <% else  %>
-           <span class="badge badge-light"><%= rental.status.upcase %></span>
-        <% end %>
-        <p>Category: <%= rental.listing.category %></p>
-        <p>From: <%= rental.from %>, Until: <%= rental.until %></p>
-        <p>Owner Username: <%= rental.listing.user.username %></p>
+  <div class="row">
+    <% @rentals.each do |rental| %>
+      <div class="col-12 col-lg-6">
+        <div class="card-product my-3 px-3">
+          <%= link_to listing_path(rental.listing) do %>
+            <%= image_tag rental.listing.photo %>
+          <% end %>
+          <div class="card-product-infos">
+            <h2><%= rental.listing.name %></h2>
+            <% if rental.status.downcase == "approved" %>
+              <span class="badge badge-success"><%= rental.status.upcase %></span>
+            <% elsif rental.status.downcase == "pending" %>
+              <span class="badge badge-warning"><%= rental.status.upcase %></span>
+            <% elsif rental.status.downcase == "denied" %>
+              <span class="badge badge-danger"><%= rental.status.upcase %></span>
+            <% else  %>
+              <span class="badge badge-light"><%= rental.status.upcase %></span>
+            <% end %>
+            <p>Category: <%= rental.listing.category %></p>
+            <p>From: <%= rental.from %>, Until: <%= rental.until %></p>
+            <p>Owner: <%= rental.listing.user.username %></p>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+
+  </div>
 </div>
