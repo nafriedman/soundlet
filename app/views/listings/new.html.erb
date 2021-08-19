@@ -1,5 +1,5 @@
 <div class = "container">
-  <h1>New Gear to Rent Out</h1>
+  <h1>New Gear for Rent Out</h1>
 
   <%= simple_form_for(@listing) do |f| %>
     <%= f.input :name %>
@@ -8,6 +8,7 @@
     <%= f.input :available %>
     <%# <%= f.input :category %>
     <%= f.input :category, collection: ['Powered Speakers', 'CD and USB Players', 'DJ Controllers', 'Subwoofers', 'Studio Monitors', 'DJ Mixers', 'Turntables', 'Headphones'].sort %>
+    <%= f.input :image, as: :file %>
     <%= f.button :submit %>
   <% end %>
 </div>
