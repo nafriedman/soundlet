@@ -3,6 +3,11 @@ class ListingsController < ApplicationController
 
   def index
     @listings = policy_scope(Listing).order(created_at: :desc)
+    if params[:query].present?
+      @listings = Listing.search_by_name_description_and_category(params[:query])
+    else
+      @listings = Listing.all
+    end
   end
 
   def new
@@ -26,7 +31,8 @@ class ListingsController < ApplicationController
   end
 
   def my_listings
-
+    @listings = Listing.where(user: current_user)
+    authorize(@listings)
   end
 
   private

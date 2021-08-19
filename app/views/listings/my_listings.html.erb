@@ -1,0 +1,27 @@
+<h1> My Gear </h1>
+
+  <div class="container">
+    <div class="cards">
+      <% @listings.each do |listing| %>
+        <%= link_to listing_path(listing) do %>
+          <div class="card-listing">
+            <img src=<%=listing.photo%>>
+            <div class="card-listing-infos">
+              <div>
+                <h2>
+                  <%= listing.name %>
+                </h2>
+                <p>
+                  <%= listing.description %>
+                </p>
+              </div>
+              <h2 class="card-listing-pricing">
+                <%= number_to_currency(listing.price) %> / day
+              </h2>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
