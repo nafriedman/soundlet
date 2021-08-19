@@ -4,16 +4,12 @@ class ListingPolicy < ApplicationPolicy
       scope.all
     end
   end
-
+  
   def show?
     true
   end
-
+  
   def create?
-    true
-  end
-
-  def listing_rentals?
     true
   end
 
