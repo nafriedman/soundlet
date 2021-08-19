@@ -15,7 +15,8 @@ emails.each_with_index do |email, index|
     email: email,
     password: '123456',
     username: usernames[index],
-    address: Faker::Address.street_address
+    address: Faker::Address.street_address,
+    avatar: Faker::Avatar.image
   )
   puts "User #{index + 1} was created."
 end

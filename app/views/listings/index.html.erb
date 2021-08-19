@@ -29,7 +29,7 @@
                 <%= number_to_currency(listing.price) %> <br>/ day
               </h2>
             </div>
-            <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
+            <%= image_tag listing.user.avatar, class: "card-listing-user avatar-bordered"%>
           </div>
         </div>
         <% end %>
