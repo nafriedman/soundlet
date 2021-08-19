@@ -8,6 +8,7 @@
     <%= f.input :available %>
     <%# <%= f.input :category %>
     <%= f.input :category, collection: ['Powered Speakers', 'CD and USB Players', 'DJ Controllers', 'Subwoofers', 'Studio Monitors', 'DJ Mixers', 'Turntables', 'Headphones'].sort %>
+    <%= f.input :image, as: :file %>
     <%= f.button :submit %>
   <% end %>
 </div>

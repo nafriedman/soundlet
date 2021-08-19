@@ -10,7 +10,11 @@
     <% @listings.each_with_index do |listing, index| %>
       <%= link_to listing_path(listing) do %>
         <div class="card-listing">
-          <img src=<%=listing.photo%>>
+        <% if listing.image.attached? %>
+          <%= cl_image_tag listing.image.key%>
+        <% else %>
+          <%= image_tag listing.photo%>>
+        <% end %>
           <div class="card-listing-infos">
             <div>
               <h2>
