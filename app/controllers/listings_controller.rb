@@ -26,7 +26,8 @@ class ListingsController < ApplicationController
   end
 
   def my_listings
-
+    @listings = Listing.where(user: current_user)
+    authorize(@listings)
   end
 
   private
