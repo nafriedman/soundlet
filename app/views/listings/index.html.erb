@@ -12,17 +12,19 @@
         <div class="card-listing">
           <img src=<%=listing.photo%>>
           <div class="card-listing-infos">
-            <div>
-              <h2>
-                <%= listing.name %>
+            <div class="d-flex">
+              <div class="pr-5">
+                <h2>
+                  <%= listing.name %>
+                </h2>
+                <p>
+                  <%= listing.description %>
+                </p>
+              </div>
+              <h2 class="card-listing-pricing pt-3">
+                <%= number_to_currency(listing.price) %> <br>/ day
               </h2>
-              <p>
-                <%= listing.description %>
-              </p>
             </div>
-            <h2 class="card-listing-pricing">
-              <%= number_to_currency(listing.price) %> / day
-            </h2>
             <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
           </div>
         </div>
