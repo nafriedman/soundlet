@@ -32,8 +32,7 @@ Listing.create!(
   price: 150.00,
   available: true,
   category: 'Powered Speakers',
-  user_id: user_id_array.sample,
-  photo: "seed1"
+  user_id: user_id_array.sample
 )
 
 # Listing 2
@@ -43,8 +42,7 @@ Listing.create!(
   price: 200.00,
   available: true,
   category: 'CD and USB Players',
-  user_id: user_id_array.sample,
-  photo: "seed2"
+  user_id: user_id_array.sample
 )
 
 # Listing 3
@@ -54,8 +52,7 @@ Listing.create!(
   price: 42.50,
   available: true,
   category: 'DJ Controllers',
-  user_id: user_id_array.sample,
-  photo: "seed3"
+  user_id: user_id_array.sample
 )
 
 # Listing 4
@@ -65,8 +62,7 @@ Listing.create!(
   price: 87.50,
   available: true,
   category: 'Subwoofers',
-  user_id: user_id_array.sample,
-  photo: "seed4"
+  user_id: user_id_array.sample
 )
 
 # Listing 5
@@ -76,8 +72,7 @@ Listing.create!(
   price: 50.00,
   available: true,
   category: 'Studio Monitors',
-  user_id: user_id_array.sample,
-  photo: "seed5"
+  user_id: user_id_array.sample
 )
 
 # Listing 6
@@ -87,8 +82,7 @@ Listing.create!(
   price: 125.00,
   available: true,
   category: 'DJ Mixers',
-  user_id: user_id_array.sample,
-  photo: "seed6"
+  user_id: user_id_array.sample
 )
 
 # Listing 7
@@ -98,8 +92,7 @@ Listing.create!(
   price: 100.00,
   available: true,
   category: 'DJ Mixers',
-  user_id: user_id_array.sample,
-  photo: "seed7"
+  user_id: user_id_array.sample
 )
 
 # Listing 8
@@ -109,8 +102,7 @@ Listing.create!(
   price: 80.00,
   available: true,
   category: 'Turntables',
-  user_id: user_id_array.sample,
-  photo: "seed8"
+  user_id: user_id_array.sample
 )
 
 # Listing 9
@@ -120,8 +112,7 @@ Listing.create!(
   price: 40.00,
   available: true,
   category: 'Headphones',
-  user_id: user_id_array.sample,
-  photo: "seed9"
+  user_id: user_id_array.sample
 )
 
 # Listing 10
@@ -131,8 +122,7 @@ Listing.create!(
   price: 40.00,
   available: true,
   category: 'DJ Controllers',
-  user_id: user_id_array.sample,
-  photo: "seed10"
+  user_id: user_id_array.sample
 )
 
 puts "All done! You now have #{Listing.count} listings!"
