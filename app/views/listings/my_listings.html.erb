@@ -5,7 +5,11 @@
       <% @listings.each do |listing| %>
         <%= link_to listing_path(listing) do %>
           <div class="card-listing">
+          <% if listing.image.attached? %>
+            <%= cl_image_tag listing.image.key %>
+          <% else %>
             <img src=<%=listing.photo%>>
+          <% end %>
             <div class="card-listing-infos">
               <div>
                 <h2>
