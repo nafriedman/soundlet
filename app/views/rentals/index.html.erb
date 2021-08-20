@@ -3,35 +3,39 @@
   <div class="row">
     <% @rentals.each do |rental| %>
       <div class="col-12 col-xl-6">
-        <div class="card-product my-3 ">
+        <div class="card-product card-rentals">
           <%= link_to listing_path(rental.listing) do %>
-          <% if rental.listing.image.attached? %>
-            <%= cl_image_tag rental.listing.image.key%>
-          <% else %>
-            <%= image_tag rental.listing.photo %>
+            <% if rental.listing.image.attached? %>
+              <%= cl_image_tag rental.listing.image.key%>
+            <% else %>
+              <%= image_tag rental.listing.photo %>
+            <% end %>
           <% end %>
-          <% end %>
+          <div class="status-tag">
+            <% if rental.status.downcase == "approved" %>
+              <span class="badge badge-success p-2"><%= rental.status.upcase %></span>
+            <% elsif rental.status.downcase == "pending" %>
+              <span class="badge badge-warning p-2"><%= rental.status.upcase %></span>
+            <% elsif rental.status.downcase == "denied" %>
+              <span class="badge badge-danger p-2"><%= rental.status.upcase %></span>
+            <% else  %>
+              <span class="badge badge-light p-2"><%= rental.status.upcase %></span>
+            <% end %>
+          </div>
+          <div class="owner">
+            <p>Owned by: <%= rental.listing.user.username %></p>
+          </div>
           <div class="card-product-infos">
             <h2><%= rental.listing.name %></h2>
-            <% if rental.status.downcase == "approved" %>
-              <span class="badge badge-success"><%= rental.status.upcase %></span>
-            <% elsif rental.status.downcase == "pending" %>
-              <span class="badge badge-warning"><%= rental.status.upcase %></span>
-            <% elsif rental.status.downcase == "denied" %>
-              <span class="badge badge-danger"><%= rental.status.upcase %></span>
-            <% else  %>
-              <span class="badge badge-light"><%= rental.status.upcase %></span>
-            <% end %>
-            <p>Category: <%= rental.listing.category %></p>
-            <div class="d-flex justify-content-between align-items-end">
+            <p><%= rental.listing.category %></p>
             <div>
-              <p>From: <%= rental.from %><br>Until: <%= rental.until %></p>
-            </div>
-              <p>Owned by: <%= rental.listing.user.username %></p>
+            <div>
+              <p>From: <%= rental.from %> / Until: <%= rental.until %></p>
             </div>
             <% if rental.status.downcase == "approved" %>
-              <div class="mt-1">Pick up at: <%= rental.listing.user.address  %></div>
+              <div class="mt-1">Pick up: <%= rental.listing.user.address  %></div>
             <% end %>
+            </div>
           </div>
         </div>
       </div>
