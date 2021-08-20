@@ -17,8 +17,15 @@ emails.each_with_index do |email, index|
     address: Faker::Address.street_address,
     avatar: Faker::Avatar.image
   )
-  puts "User #{index + 1} was created."
 end
+
+User.create!(
+  email: "f@f.f",
+  password: '123456',
+  username: Faker::Internet.username,
+  address: "5333 avenue Casgrain, suite 102, Montreal",
+  avatar: Faker::Avatar.image
+)
 
 puts "All done! You now have #{User.count} users!"
 
@@ -131,7 +138,18 @@ Listing.create!(
   price: 40.00,
   available: true,
   category: 'DJ Controllers',
-  user_id: user_id_array.sample,
+  user_id: user_id_array.second,
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387261/seed10.jpg"
+)
+
+# Listing 11
+Listing.create!(
+  name: 'Pioneer DDJ-SX DJ Controller',
+  description: 'Perfect condition. Works with Serato and Rekordbox.',
+  price: 40.00,
+  available: true,
+  category: 'DJ Controllers',
+  user_id: user_id_array.last,
   photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387261/seed10.jpg"
 )
 
