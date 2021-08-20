@@ -14,7 +14,7 @@
           <div class="form-group">
             <%= simple_form_for [@listing, rental] do |f| %>
               <div class="my-2">
-                <%= f.input :status, as: :select, collection: Rental::STATUS %>
+                <%= f.input :status, as: :select, collection: Rental::STATUS, include_blank: false %>
                 <%= f.hidden_field :rental_id, value: rental.id %>
               </div>
               <%= f.submit %>
