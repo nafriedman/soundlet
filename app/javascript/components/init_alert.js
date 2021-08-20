@@ -5,7 +5,7 @@ const clear = () => {
 
 const alert = () => {
   const notice = document.getElementById('notice');
-  if (notice && notice.innerText = "Status updated successfully!") {
+  if (notice && notice.innerText === "Status updated successfully!") {
     notice.classList.add('alert');
     setTimeout(clear, 3000);
   }
