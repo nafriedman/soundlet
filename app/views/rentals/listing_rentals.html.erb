@@ -6,7 +6,7 @@
     <% @rentals.each do |rental| %>
       <div class="col-6">
         <div class="card my-3 p-3">
-          <h3>Rental requested by <%= rental.user.username %></h3>  
+          <h3>Rental requested by <%= rental.user.username %></h3>
           <p>From <%= rental.from %></p>
           <p>Until <%= rental.until %></p>
           <p>Listing <%= rental.listing.id %></p>
@@ -17,12 +17,12 @@
                 <%= f.input :status, as: :select, collection: Rental::STATUS, include_blank: false %>
                 <%= f.hidden_field :rental_id, value: rental.id %>
               </div>
-              <%= f.submit %>
+              <%= f.submit%>
             <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
-<div class="btn btn-light"><%= link_to 'Back to My Gear', my_listings_path(current_user) %></div>
+  <%= link_to 'Back to My Gear', my_listings_path(current_user), class: "btn btn-secondary rounded-pill", id:"button" %>
 </div>
