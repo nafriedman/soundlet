@@ -1,6 +1,6 @@
 <div class="container search-form-control form-group pt-3">
   <form method='get' action="/listings">
-    <%= text_field_tag :query, params[:query], class: "form-control" , placeholder: "Find a Gear to Rent Out" %>
+    <%= text_field_tag :query, params[:query], class: "form-control" , placeholder: "Find Gear!" %>
     <%= submit_tag "Search" , class: "btn btn-flat mr-3 pt-4"%>
   </form>
 </div>
@@ -10,20 +10,26 @@
     <% @listings.each_with_index do |listing, index| %>
       <%= link_to listing_path(listing) do %>
         <div class="card-listing">
-          <img src=<%=listing.photo%>>
+        <% if listing.image.attached? %>
+          <%= cl_image_tag listing.image.key%>
+        <% else %>
+          <%= image_tag listing.photo%>>
+        <% end %>
           <div class="card-listing-infos">
-            <div>
-              <h2>
-                <%= listing.name %>
+            <div class="d-flex">
+              <div class="pr-5">
+                <h2>
+                  <%= listing.name %>
+                </h2>
+                <p>
+                  <%= listing.description %>
+                </p>
+              </div>
+              <h2 class="card-listing-pricing pt-3">
+                <%= number_to_currency(listing.price) %> <br>/ day
               </h2>
-              <p>
-                <%= listing.description %>
-              </p>
             </div>
-            <h2 class="card-listing-pricing">
-              <%= number_to_currency(listing.price) %> / day
-            </h2>
-            <img src="https://i.pravatar.cc/150?img=<%= index + 1 %>" class="card-listing-user avatar-bordered" />
+            <%= image_tag listing.user.avatar, class: "card-listing-user avatar-bordered"%>
           </div>
         </div>
         <% end %>

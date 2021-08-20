@@ -2,7 +2,11 @@
   <h1 class="margin-top"><%=@listing.name%></h1>
 
   <div class="margin-top d-flex align-items-center">
-    <img src=<%=@listing.photo%> width="400px">
+  <% if @listing.image.attached? %>
+    <%= cl_image_tag @listing.image.key, width: 400%>
+  <% else %>
+    <%= image_tag @listing.photo, width: 400%>
+  <% end%>
     <div class="ml-3">
       <div>
         <h4 class="mb-4 ml-4"><%= @listing.description %></h4>

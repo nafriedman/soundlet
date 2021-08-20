@@ -2,9 +2,8 @@ class RentalsController < ApplicationController
   before_action :set_rental, only: [:update]
   before_action :set_listing, except: [:index]
 
-
   def index
-    @rentals = policy_scope(Rental)
+    @rentals = policy_scope(Rental).where(user: current_user)
   end
 
   def create
@@ -25,9 +24,10 @@ class RentalsController < ApplicationController
     end
     authorize(@rental)
   end
-
+  
   def listing_rentals
-    authorize(@listing)
+    @rentals = policy_scope(Rental).joins(:listing).where(listing_id: params[:listing_id]).order(from: :asc)
+    authorize(@rentals)
   end
 
   private
