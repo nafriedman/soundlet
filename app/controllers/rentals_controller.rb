@@ -26,7 +26,7 @@ class RentalsController < ApplicationController
   end
   
   def listing_rentals
-    @rentals = policy_scope(Rental)
+    @rentals = policy_scope(Rental).joins(:listing).where(listing_id: params[:listing_id]).order(from: :asc)
     authorize(@rentals)
   end
 
