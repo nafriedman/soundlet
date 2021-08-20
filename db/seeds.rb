@@ -144,13 +144,13 @@ Listing.create!(
 
 # Listing 11
 Listing.create!(
-  name: 'Pioneer DDJ-SX DJ Controller',
-  description: 'Perfect condition. Works with Serato and Rekordbox.',
-  price: 40.00,
+  name: 'Pioneer DDJ-SX Controller',
+  description: 'Mint condition. Works with most DJ software including Serato and Rekordbox.',
+  price: 35.00,
   available: true,
   category: 'DJ Controllers',
   user_id: user_id_array.last,
-  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629387261/seed10.jpg"
+  photo: "https://res.cloudinary.com/dploqe2ts/image/upload/v1629481003/seed11.jpg"
 )
 
 puts "All done! You now have #{Listing.count} listings!"
