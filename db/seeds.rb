@@ -158,7 +158,7 @@ puts "All done! You now have #{Listing.count} listings!"
 User.create!(
     email: "dylan@d.com",
     password: '123456',
-    username: Faker::Internet.username,
+    username: "dylan",
     address: "72 McGill, Montreal",
     avatar: Faker::Avatar.image
 )
