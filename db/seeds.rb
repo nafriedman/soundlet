@@ -8,13 +8,12 @@ puts 'Destroying all users.'
 User.destroy_all
 
 emails = %w[a@a.a b@b.b c@c.c d@d.d e@e.e]
-usernames = %w[a b c d e]
 
 emails.each_with_index do |email, index|
   User.create!(
     email: email,
     password: '123456',
-    username: usernames[index],
+    username: Faker::Internet.username,
     address: Faker::Address.street_address,
     avatar: Faker::Avatar.image
   )
