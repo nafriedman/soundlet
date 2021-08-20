@@ -1,6 +1,5 @@
-<h1> My Gear </h1>
-
-  <div class="container">
+<div class="container mt-4">
+  <h1> My Gear </h1>
     <div class="cards">
       <% @listings.each do |listing| %>
         <%= link_to listing_rentals_path(listing) do %>
@@ -10,18 +9,12 @@
           <% else %>
             <%= image_tag listing.photo%>
           <% end %>
-            <div class="card-listing-infos">
-              <div>
-                <h2>
-                  <%= listing.name %>
-                </h2>
-                <p>
-                  <%= listing.description %>
-                </p>
+            <div class="card-listing-infos d-flex flex-column justify-content-between align-items-end">
+              <div class="card-product-content">
+                <h2><%= number_to_currency(listing.price) %><small>/day</small></h2>
+                <h2 class="mt-2"><%= listing.name %></h2>
+                <p><%= listing.description %></p><br>
               </div>
-              <h2 class="card-listing-pricing">
-                <%= number_to_currency(listing.price) %> / day
-              </h2>
             </div>
           </div>
         <% end %>

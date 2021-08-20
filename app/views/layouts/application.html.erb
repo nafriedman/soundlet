@@ -12,8 +12,16 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-      <%= yield %>
-    <%= render "shared/footer" %>
+    <div class="global-container d-flex flex-column justify-content-between vh-100">
+      <div>
+        <%= render 'shared/navbar' %>
+        <div class="main-content align-items-top flex-grow">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="footer align-items-end">
+        <%= render "shared/footer" %>
+      </div>
+    </div>
   </body>
 </html>
