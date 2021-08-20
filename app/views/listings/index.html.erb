@@ -5,11 +5,12 @@
   </form>
 </div>
 
-  <h1 class="margin-top">Gear for Rent</h1>
+<h1 class="margin-top">Gear for Rent</h1>
+<div class="container">
   <div class="cards">
     <% @listings.each_with_index do |listing, index| %>
       <%= link_to listing_path(listing) do %>
-        <div class="card-listing">
+        <div class="card-listing mx-1 my-2">
         <% if listing.image.attached? %>
           <%= cl_image_tag listing.image.key%>
         <% else %>
@@ -35,3 +36,5 @@
         <% end %>
       <% end %>
   </div>
+
+</div>
