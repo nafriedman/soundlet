@@ -1,12 +1,12 @@
 .card-listing {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
   margin: 40px;
-  border-radius: 8px;
+  border-radius: 4px;
   color: black;
   text-decoration: none;
-  height: 85%;
+  height: 80%;
   p {
   font-size: 12px;
   opacity: .7;
@@ -33,7 +33,7 @@
   height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 4px 4px 0 0;
   }
   &:hover {
   color:rgba(0, 0, 0, 0.8);
@@ -64,15 +64,16 @@ h1 {
 
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: auto;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 4px;
   img {
-    height: 100%;
-    width: 120px;
+    height: 180px;
     object-fit: cover;
+    width: 200px;
   }
   h2 {
     font-size: 16px;
@@ -80,18 +81,15 @@ h1 {
     margin: 0;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
   }
   .card-product-infos {
-    padding: 0 16px;
+    padding: 16px;
     height: 80%;
     width: 85%;
-  }
-  a {
-    height: 80%;
   }
 }
