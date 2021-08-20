@@ -19,12 +19,7 @@
           <div class="card-listing-infos">
             <div class="d-flex justify-content-between card-product-content">
               <div class="pr-5 flex-grow">
-                <h2>
-                  <%= listing.name %>
-                </h2>
-                <p>
-                  <%= listing.description %>
-                </p>
+                <h2><%= listing.name %></h2>
               </div>
               <h2 class="card-listing-pricing pt-3">
                 <%= number_to_currency(listing.price) %><small>/day</small>
