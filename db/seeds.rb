@@ -155,6 +155,14 @@ Listing.create!(
 
 puts "All done! You now have #{Listing.count} listings!"
 
+User.create!(
+    email: "dylan@d.com",
+    password: '123456',
+    username: Faker::Internet.username,
+    address: "72 McGill, Montreal",
+    avatar: Faker::Avatar.image
+)
+
 # Rental seed
 listing_id_array = Listing.all.collect { |obj| obj.id }
 
