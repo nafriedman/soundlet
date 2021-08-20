@@ -29,6 +29,9 @@
             </div>
               <p>Owned by: <%= rental.listing.user.username %></p>
             </div>
+            <% if rental.status.downcase == "approved" %>
+              <div class="mt-1">Pick up at <%= rental.listing.user.address  %></div>
+            <% end %>
           </div>
         </div>
       </div>
