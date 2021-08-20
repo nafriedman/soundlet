@@ -3,7 +3,7 @@
   <div class="row mt-5">
     <% @rentals.each do |rental| %>
       <div class="col-12 col-xl-6">
-        <div class="card-product card-rentals">
+        <div class="card-product card-rentals my-2">
           <%= link_to listing_path(rental.listing) do %>
             <% if rental.listing.image.attached? %>
               <%= cl_image_tag rental.listing.image.key%>
@@ -22,6 +22,11 @@
               <span class="badge badge-light p-2"><%= rental.status.upcase %></span>
             <% end %>
           </div>
+          <div class="pu">
+            <% if rental.status.downcase == "approved" %>
+              <div class="mt-1"><i class="fas fa-truck-pickup"></i>     <%= rental.listing.user.address  %></div>
+            <% end %>
+          </div>
           <div class="owner">
             <p>Owned by: <%= rental.listing.user.username %></p>
           </div>
@@ -32,9 +37,6 @@
             <div>
               <p>From: <%= rental.from %> / Until: <%= rental.until %></p>
             </div>
-            <% if rental.status.downcase == "approved" %>
-              <div class="mt-1">Pick up: <%= rental.listing.user.address  %></div>
-            <% end %>
             </div>
           </div>
         </div>
