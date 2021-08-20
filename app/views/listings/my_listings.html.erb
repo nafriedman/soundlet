@@ -3,7 +3,7 @@
     <div class="cards">
       <% @listings.each do |listing| %>
         <%= link_to listing_rentals_path(listing) do %>
-          <div class="card-listing">
+          <div class="card-listing card-height">
           <% if listing.image.attached? %>
             <%= cl_image_tag listing.image.key %>
           <% else %>
@@ -13,7 +13,7 @@
               <div class="card-product-content">
                 <h2><%= number_to_currency(listing.price) %><small>/day</small></h2>
                 <h2 class="mt-2"><%= listing.name %></h2>
-                <p><%= listing.description %></p><br>
+                <!-- <p><%= listing.description %></p><br> -->
               </div>
             </div>
           </div>
