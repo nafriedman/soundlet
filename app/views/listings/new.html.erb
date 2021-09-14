@@ -3,8 +3,14 @@
 
   <%= simple_form_for(@listing) do |f| %>
     <%= f.input :name %>
+    <%@listing.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
     <%= f.input :description %>
     <%= f.input :price %>
+    <%@listing.errors.full_messages_for(:price).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
     <%= f.input :category, collection: ['Powered Speakers', 'CD and USB Players', 'DJ Controllers', 'Subwoofers', 'Studio Monitors', 'DJ Mixers', 'Turntables', 'Headphones'].sort %>
     <%= f.input :image, as: :file %>
     <%= f.button :submit, class: "btn btn-primary rounded-pill my-2" %>

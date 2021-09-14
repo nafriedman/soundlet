@@ -3,6 +3,9 @@ class Listing < ApplicationRecord
   has_many :rentals, dependent: :destroy
   has_one_attached :image
 
+  # Validations
+  validates :price, numericality: true
+
   include PgSearch::Model
   pg_search_scope :search_by_name_description_and_category,
                   against: [

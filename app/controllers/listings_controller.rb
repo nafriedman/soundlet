@@ -20,7 +20,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     @listing.available = true
     authorize(@listing)
-    if @listing.save!
+    if @listing.save
       redirect_to my_listings_path(current_user)
     else
       render :new
