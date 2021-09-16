@@ -2,50 +2,35 @@
   <h1 class="margin-top"><%=@listing.name%></h1>
 
   <div class="margin-top d-flex align-items-center">
-  <% if @listing.image.attached? %>
-    <%= cl_image_tag @listing.image.key, width: 400%>
-  <% else %>
-    <%= image_tag @listing.photo, width: 400%>
-  <% end%>
+    <% if @listing.image.attached? %>
+      <%= cl_image_tag @listing.image.key, width: 400%>
+    <% else %>
+      <%= image_tag @listing.photo, width: 400%>
+    <% end%>
     <div class="ml-3">
       <div>
         <h4 class="mb-4 ml-4"><%= @listing.description %></h4>
       </div>
-      <p><strong class="ml-4">Price:</strong> <%= number_to_currency(@listing.price) %> / day
+      <p>
+        <strong class="ml-4">Price:</strong> <%= number_to_currency(@listing.price) %> / day
       </p>
-      <p><strong class="ml-4">Owner:</strong> <%= @listing.user.username %>
+      <p>
+        <strong class="ml-4">Owner:</strong> <%= @listing.user.username %>
       </p>
-      <p><strong class="ml-4">Category:</strong> <%= @listing.category %>
+      <p>
+        <strong class="ml-4">Category:</strong> <%= @listing.category %>
       </p>
-      <p><strong class="ml-4">Pick-Up Address:</strong> <%= @listing.user.address %>
+      <p>
+        <strong class="ml-4">Pick-Up Address:</strong> <%= @listing.user.address %>
       </p>
     </div>
   </div>
 
-<div class="mt-3 d-flex mb-2">
-    <div>
-      <% if @listing.available %>
-        <h3>
-          <style class="badge p-3 my-2 badge-success">
-            Available!
-          </style>
-        </h3>
-      <% else %>
-          <h3>
-            <style class="badge p-3 my-2 badge-warning" width="200px">
-              Not available.
-            </style>
-          </h3>
-        <% end %>
-    </div> <h3 class="ml-4 mt-3">I need this equipement...</h3>
-  </div>
-
-  <div class="col-8 p-0">
-    <%= simple_form_for [ @listing, @rental ] do |f| %>
-      <%= f.input :from %>
-      <%= f.input :until %>
-      <%= f.hidden_field :status, value: "pending" %>
-      <%= f.submit "Send my request", class: "btn btn-primary rounded-pill my-3" %>
+  <div class="mt-3 mb-2">
+    <% if @listing.available %>
+      <h3>Available</h3>
+      <%= render 'listing_request_form' %>
+    <% else %>
+      <h3>I'm sorry this equipment is currently unavailible</h3>
     <% end %>
-  </div>
 </div>
