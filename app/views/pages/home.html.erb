@@ -3,11 +3,6 @@
   <div class="container">
     <h1 class="text-left">Soundlet makes it easy to <em>rent</em> audio equipment.</h1>
     <p>Whether you're looking to rent someone's equipment or rent out your own gear, <br>Soundlet will make your experience effortless!</p>
-      <div class="search-form-control form-group pt-3">
-        <form method='get' action="/listings">
-          <%= text_field_tag :query, params[:query], class: "form-control rounded-pill" , placeholder: "Find Gear!" %>
-          <%= submit_tag "Search" , class: "btn mt-3 border rounded-pill btn-outline-primary" %>
-        </form>
-      </div>
+    <%= render 'shared/search' %>
   </div>
 </div>

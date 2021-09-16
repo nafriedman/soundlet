@@ -1,0 +1,6 @@
+<div class="search-form-control form-group pt-3">
+  <form method='get' action="/listings">
+      <%= text_field_tag :query, params[:query], class: "form-control rounded-pill" , placeholder: "Find Gear!" %>
+      <%= submit_tag "Search" , class: "btn mt-3 border rounded-pill btn-outline-primary" %>
+  </form>
+</div>
