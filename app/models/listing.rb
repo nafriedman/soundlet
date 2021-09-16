@@ -1,4 +1,8 @@
 class Listing < ApplicationRecord
+  # Constants
+  CATEGORIES = ['Powered Speakers', 'CD and USB Players', 'DJ Controllers', 'Subwoofers', 'Studio Monitors', 'DJ Mixers', 'Turntables', 'Headphones'].sort
+
+  # Associations
   belongs_to :user
   has_many :rentals, dependent: :destroy
   has_one_attached :image

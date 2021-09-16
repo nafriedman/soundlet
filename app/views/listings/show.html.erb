@@ -1,28 +1,18 @@
 <div class="container">
   <h1 class="margin-top"><%=@listing.name%></h1>
 
-  <div class="margin-top d-flex align-items-center">
+  <div class="margin-top d-flex align-items-center justify-content-center">
     <% if @listing.image.attached? %>
       <%= cl_image_tag @listing.image.key, width: 400%>
     <% else %>
       <%= image_tag @listing.photo, width: 400%>
     <% end%>
     <div class="ml-3">
-      <div>
-        <h4 class="mb-4 ml-4"><%= @listing.description %></h4>
-      </div>
-      <p>
-        <strong class="ml-4">Price:</strong> <%= number_to_currency(@listing.price) %> / day
-      </p>
-      <p>
-        <strong class="ml-4">Owner:</strong> <%= @listing.user.username %>
-      </p>
-      <p>
-        <strong class="ml-4">Category:</strong> <%= @listing.category %>
-      </p>
-      <p>
-        <strong class="ml-4">Pick-Up Address:</strong> <%= @listing.user.address %>
-      </p>
+      <h4 class="mb-4 ml-4"><%= @listing.description %></h4>
+      <p><strong class="ml-4">Price:</strong> <%= number_to_currency(@listing.price) %> / day</p>
+      <p><strong class="ml-4">Owner:</strong> <%= @listing.user.username %></p>
+      <p><strong class="ml-4">Category:</strong> <%= @listing.category %></p>
+      <p><strong class="ml-4">Pick-Up Address:</strong> <%= @listing.user.address %></p>
     </div>
   </div>
 
@@ -31,6 +21,6 @@
       <h3>Available</h3>
       <%= render 'listing_request_form' %>
     <% else %>
-      <h3>I'm sorry this equipment is currently unavailible</h3>
+      <h3>I'm sorry this equipment is currently unavailable</h3>
     <% end %>
 </div>
