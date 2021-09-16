@@ -1,11 +1,8 @@
 <div class="container">
+  <h1 class="margin-top">Gear for Rent</h1>
   <%= render 'shared/search' %>
-</div>
-
-<h1 class="margin-top">Gear for Rent</h1>
-<div class="container">
   <div class="cards">
-    <% @listings.each_with_index do |listing, index| %>
+    <% @listings.each do |listing| %>
       <%= render 'listings_card', listing: listing %>
     <% end %>
   </div>
